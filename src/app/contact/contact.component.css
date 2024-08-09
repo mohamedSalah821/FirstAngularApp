@@ -1,0 +1,39 @@
+.color{
+    color: rgb(44, 62, 80) ;
+}
+.bgg{
+    background-color: rgb(44, 62, 80) ;
+}
+
+.line{
+    height: 4px;
+    width: 80px;
+}
+
+
+
+button{
+    background-color: var(--main-color);
+}
+.btn:hover {
+    color: white;
+    background-color: var(--main-color);
+} 
+
+form {
+    max-width: 650px;
+    margin: 50px auto;
+  }
+  form div input{
+    position: relative;
+    background-color: #fff;
+  }
+  form div label {
+    color: var(--main-color);
+    transform: translateY(200%);
+    transition: 0.5s transform;
+  }
+  form div:has(input:not(:placeholder-shown)) label{
+    transform: translateY(0);
+  }
+  

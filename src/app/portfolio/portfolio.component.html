@@ -1,0 +1,40 @@
+    <div class="mb-4  ">
+        
+        <div class="pt-5  text-center">
+            <app-star  [title]="'portfolio component'" [darkTheme]="true"></app-star>
+            <div class="container">
+                <div class="portfolio-container">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+                      @for(img of images; track $index) {
+                        <div class="col">
+                          <span (click)="getPopUp(img.img)" class="image-hover d-block rounded overflow-hidden">
+                            <img [src]="img.img" alt="portfolio image" class="w-100 d-block">
+                          </span>
+                        </div>
+                      }
+                    </div>
+                  </div>
+            </div>
+            @defer{
+                <div #popUpElement class="popup bg-opacity-25 bg-primary" (click)="closePopUp($event)">
+                    <span class="d-block">
+                      <img [src]="popUpImage" alt="" class="w-100 d-block">
+                    </span>
+                </div>
+              }
+            
+        </div>
+
+
+
+        <h1  class="my-3 bg-danger rounded-pill  text-center ">Recommendation For You....</h1>
+        <button #ham class="btn btn-primary rounded-pill w-25 fw-bolder ms-5"  >Click :</button>
+
+        @defer (on interaction(ham)){
+            <app-recommendation></app-recommendation>
+        }
+        @loading (minimum 2s) {
+            <h1 class="text-center">Recommendation Loading.......</h1>
+        }
+    
+    </div>

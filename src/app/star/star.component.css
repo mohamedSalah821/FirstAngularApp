@@ -1,0 +1,33 @@
+/* .line{
+    height: 4px;
+    width: 80px;
+} */
+
+.star-line {
+    display: block;
+    width: 250px;
+    height: 5px;
+    margin: 15px auto;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .star-line::before {
+    content:'\f005';
+    font-family: 'fontawesome';
+    position: absolute;
+    background-color: var(--main-color);
+    padding: 0 20px;
+  }
+  .title-dark-theme {
+    color:var(--second-color)
+  }
+  .title-dark-theme span {
+    background-color: var(--second-color)
+  }
+  .title-dark-theme span::before {
+    background-color: #fff;
+  }
+  

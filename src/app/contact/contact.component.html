@@ -1,0 +1,50 @@
+<div class="mb-4  ">
+
+        <div class="pt-5  ">
+        <div>
+          <app-star [title]="'conatct section'" [darkTheme]="true"></app-star>
+            </div>
+
+
+
+            <form (submit)="preventEvent($event)">
+                <div>
+                  <label for="inputUsername" class="mb-3">userName:</label>
+                  <input
+                    id="inputUsername"
+                    type="text"
+                    class="form-control border-0 border-bottom shadow-none"
+                    placeholder="userName"
+                  />
+                </div>
+                <div>
+                  <label for="inputUsername" class="mb-3">userAge:</label>
+                  <input
+                    type="text"
+                    class="form-control border-0 border-bottom shadow-none"
+                    placeholder="userAge"
+                  />
+                </div>
+                <div>
+                  <label for="inputUsername" class="mb-3">userEmail:</label>
+                  <input
+                    type="text"
+                    class="form-control border-0 border-bottom shadow-none"
+                    placeholder="userEmail"
+                  />
+                </div>
+                <div>
+                  <label for="inputUsername" class="mb-3">userPassword:</label>
+                  <input
+                    type="password"
+                    class="form-control border-0 border-bottom shadow-none"
+                    placeholder="userPassword"
+                  />
+                </div>
+                <div class="mt-4">
+                  <button class="btn  text-white">send Message</button>
+                </div>
+              </form>
+        </div>
+
+</div>
